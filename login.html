@@ -2,55 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/lib/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body>
 
-    <div id="logo"></div>
-    <div class="model" id="login">        
-            <div class="title"><img src="assets/images/login_title.png" alt=""></div>
-            <div class="username">
-                <i class="layui-icon layui-icon-username"></i>
-                <input type="text" name="username" id="username" placeholder="请输入用户名">
-            </div>
-            <div class="password">
-                <i class="layui-icon layui-icon-password"></i>
-                <input type="text" name="password" id="password" placeholder="请输入密码">
-            </div>
-            <div>
-                <button>登录</button>
-            </div>
-            <div class="jump">
-                去注册账户
-            </div>
-    </div>
-    <div class="model" id = "register">        
-            <div class="title"><img src="assets/images/login_title.png" alt=""></div>
-            <div class="username">
-                <i class="layui-icon layui-icon-username"></i>
-                <input type="text" name="username" id="username" placeholder="请输入用户名">
-            </div>
-            <div class="password">
-                <i class="layui-icon layui-icon-password"></i>
-                <input type="text" name="password" id="password" placeholder="请输入密码">
-            </div>
-            <div class="password">
-                <i class="layui-icon layui-icon-password"></i>
-                <input type="text" name="repassword" id="repassword" placeholder="请输入密码">
-            </div>
-            <div>
-                <button>注册</button>
-            </div>
-            <div class="jump">
-                去登录
-            </div>
-    </div>
-    <script src="assets/js/login.js"></script>
+  <div id="logo"></div>
+  <div class="model" id="login">
+
+    <div class="title"><img src="assets/images/login_title.png" alt=""></div>
+    <form class="layui-form">
+      <div class="username">
+        <i class="layui-icon layui-icon-username"></i>
+        <input type="text" name="username" placeholder="请输入用户名" lay-verify="required" autocomplete="off">
+      </div>
+      <div class="password">
+        <i class="layui-icon layui-icon-password"></i>
+        <input type="password" name="password"  placeholder="请输入密码" lay-verify="required|psw" autocomplete="off">
+      </div>
+      <div>
+        <button lay-submit="">登录</button>
+      </div>
+      <div class="jump">
+        去注册账户
+      </div>
+    </form>
+
+
+  </div>
+  <div class="model" id="register">
+    <div class="title"><img src="assets/images/login_title.png" alt=""></div>
+    <form action="javaScript:;" class="layui-form" >
+      <div class="username">
+        <i class="layui-icon layui-icon-username"></i>
+        <input type="text" name="username" placeholder="请输入用户名" lay-verify="required|username" autocomplete="off"> 
+      </div>
+      <div class="password">
+        <i class="layui-icon layui-icon-password"></i>
+        <input type="password" name="password" id="password" placeholder="请输入密码" autocomplete="off" lay-verify="required|psw">
+      </div>
+      <div class="password">
+        <i class="layui-icon layui-icon-password"></i>
+        <input type="password" name="repassword" id="repassword" placeholder="请输入密码" lay-verify="required|repsw">
+      </div>
+      <div>
+        <button lay-submit>注册</button>
+      </div>
+      <div class="jump">
+        去登录
+      </div>
+    </form>
+
+  </div>
+
+
+  <script src="assets/lib/layui/layui.all.js"></script>
+  <script src="assets/lib/jquery.js"></script>
+
+  <script src="assets/js/login.js"></script>
 </body>
 
 </html>
