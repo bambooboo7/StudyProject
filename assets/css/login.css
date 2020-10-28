@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url(../images/login_bg.jpg) no-repeat 0 0 /cover;
+}
+
+#logo {
+    background: url(../images/logo.png) no-repeat 0 0 /contain;
+    height: 60px;
+    width: 146px;
+    margin: 10px 100px;
+}
+
+.model {
+    width: 450px;
+    height: 310px;
+    margin: 100px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .05);
+}
+
+.model .title {
+    height: 60px;
+    text-align: center;
+}
+
+.title img {
+    margin-top: 20px;
+}
+
+.username,
+.password {
+    position: relative;
+}
+
+.model i {
+    position: absolute;
+    left: 9%;
+    top: 10px;
+}
+
+.model input,
+.model button {
+    height: 35px;
+    width: 86%;
+    margin-left: 7%;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #999999;
+    outline: none;
+}
+
+.model input {
+    text-indent: 30px;
+}
+
+.model button {
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #1e9fff;
+}
+
+.model .jump{
+    float: right;
+    margin-right: 10%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.model .jump:hover{
+    color: #1e9fff;
+}
+
+#login{
+    /* display: none; */
+}
+
+#register{
+    display: none;
+
+}
