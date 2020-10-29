@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#nav ul {
+  width: 100%;
+  height: 60px;
+  padding: 0 60px;
+  background: #393d49 url(../images/logo.png) no-repeat 60px 0;
+}
+
+#nav ul li {
+  float: right;
+}
+
+aside ul.layui-nav-side {
+  top: 60px;
+}
+
+aside .welcome {
+  height: 60px;
+  padding-left: 20px;
+  line-height: 60px;
+  vertical-align: middle;
+}
+
+aside i {
+  margin-right: 10px;
+}
+
+aside dd i {
+  margin-left: 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 200px;
+  height: 44px;
+  width: 100%;
+  background-color: #eeeeee;
+  line-height: 44px;
+  font-size: 12px;
+  text-align: center;
+}
+
+main {
+  position: fixed;
+  top: 60px;
+  left: 200px;
+  right: 0px;
+  bottom: 44px;
+  
+
+}
+
+main iframe {
+  width: 100%;
+  height: 100%;
+  /* background-color: teal; */
+}
