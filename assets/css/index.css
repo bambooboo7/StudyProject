@@ -29,6 +29,7 @@ aside .welcome {
   padding-left: 20px;
   line-height: 60px;
   vertical-align: middle;
+
 }
 
 aside i {
@@ -36,7 +37,7 @@ aside i {
 }
 
 aside dd i {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 footer {
@@ -57,7 +58,7 @@ main {
   left: 200px;
   right: 0px;
   bottom: 44px;
-  
+
 
 }
 
@@ -66,3 +67,24 @@ main iframe {
   height: 100%;
   /* background-color: teal; */
 }
+
+
+
+.avatar {
+  
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background: #009688;
+  font-size: 15px;
+  color: #FFF;
+  line-height: 30px;
+  text-align: center;
+}
+
+#nav .avatar {
+  margin-right: 3px;
+}
+
