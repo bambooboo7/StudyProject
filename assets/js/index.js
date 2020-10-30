@@ -14,10 +14,9 @@ exit.onclick = function () {
 const urlPrime = "http://ajax.frontend.itheima.net";
 
 // 存储这次获得的用户信息
+var userinfo = {};
 
 const token = localStorage.getItem("token");
-
-
 
 
 const xhr = new XMLHttpRequest();
@@ -30,9 +29,11 @@ xhr.onreadystatechange = function (e) {
     const res = JSON.parse(xhr.responseText);
     console.log(res);
     //验证用户是否有令牌，没令牌强制退出系统
-    // vertifyRes(res);
+    vertifyRes(res);
+    userinfo = res.data;
     //验证成功 执行下方代码
-    loadUser(xhr.responseText);
+
+    loadUser(res.data.nickname, res.data.username, res.data.user_pic);
   }
 }
 
@@ -47,12 +48,12 @@ function vertifyRes(res) {
 }
 
 
-function loadUser(data) {
-  const res = JSON.parse(data);
-  $("#username").text(res.data.username)
-  if (res.data.user_pic) {
-    $(".avatar").hide().siblings("img").prop("src", res.data.user_pic).show();
+function loadUser(nickname, username, avatar) {
+
+  $("#username").text(nickname || username)
+  if (avatar) {
+    $(".avatar").hide().siblings("img").prop("src", avatar).show();
   } else {
-    $(".avatar").show().text(res.data.username[0].toUpperCase()).siblings("img").hide();
+    $(".avatar").show().text(nickname[0].toUpperCase() || username[0].toUpperCase()).siblings("img").hide();
   }
 }
