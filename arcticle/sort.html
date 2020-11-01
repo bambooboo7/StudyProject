@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="../assets/css/user/userCommonCSS.css">
+  <style>
+    .title button {
+      margin-left: 30px;
+    }
+
+    form {
+      padding: 20px 20px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .layui-form-label {
+      width: 60px;
+    }
+
+    .layui-input-block {
+      margin-left: 90px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="title">
+      文章类别管理
+    </div>
+    <div id="box">
+
+      <button type="button" class="layui-btn  layui-btn-normal">添加类别</button>
+
+      <table class="layui-table">
+        <colgroup>
+          <col width="30%">
+          <col width="50%">
+          <col width="20%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>分类名称</th>
+            <th>分类别名</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+       
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  
+  <!-- 添加文章弹出层 -->
+  <script type="text/html" id="dialog">
+    <form class="layui-form" action="" id="addform">
+      <div class="layui-form-item">
+        <label class="layui-form-label">分类名称</label>
+        <div class="layui-input-block">
+          <input type="text" name="name" lay-verify="required" placeholder="请输入标题" autocomplete="off"
+            class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">分类别名</label>
+        <div class="layui-input-block">
+          <input type="text" name="alias" lay-verify="required" placeholder="请输入标题" autocomplete="off"
+            class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="formDemo">确认添加</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </div>
+    </form>
+  </script>
+
+  <!-- 修改文章弹出层 -->
+  <script type="text/html" id="editSort">
+    <form class="layui-form" action="" id="editform">
+      <div class="layui-form-item">
+        <label class="layui-form-label">分类名称</label>
+        <div class="layui-input-block">
+          <input type="text" name="name" lay-verify="required" autocomplete="off"
+            class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">分类别名</label>
+        <div class="layui-input-block">
+          <input type="text" name="alias" lay-verify="required" autocomplete="off"
+            class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="formDemo">确认修改</button>
+          
+        </div>
+      </div>
+    </form>
+  </script>
+
+  <script src="../assets/lib/layui/layui.all.js"></script>
+  <script src="../assets/lib/jquery.js"></script>
+
+  <script src="../assets/js/getUserInfo.js"></script>
+  <script src="../assets/js/arcticle/sort.js"></script>
+</body>
+
+</html>

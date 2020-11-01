@@ -21,3 +21,8 @@ body {
 form{
   width: 600px;
 }
+
+#box {
+  padding: 20px;
+  padding-top: 0;
+}

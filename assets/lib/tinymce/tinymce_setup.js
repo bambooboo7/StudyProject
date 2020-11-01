@@ -17,6 +17,9 @@ function initEditor() {
       'save table contextmenu directionality template paste textcolor',
       'codesample imageupload'
     ],
+    setup: function(editor){ 
+      editor.on('change',function(){ editor.save(); });
+    },
     //工具栏的补丁按钮
     toolbar:
       'insertfile undo redo | \
